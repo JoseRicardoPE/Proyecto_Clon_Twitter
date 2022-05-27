@@ -1,0 +1,32 @@
+{
+  "name": "proyecto_clon_twitter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseRicardoPE/Proyecto_Clon_Twitter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoseRicardoPE/Proyecto_Clon_Twitter/issues"
+  },
+  "homepage": "https://github.com/JoseRicardoPE/Proyecto_Clon_Twitter#readme",
+  "dependencies": {
+    "@faker-js/faker": "^7.1.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.3.4",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
+  }
+}
