@@ -1,3 +1,5 @@
+const modelTweet = require("../models/modelTweet");
+
 const publicController = {
   showHome: async (req, res) => {
     res.render("home");
