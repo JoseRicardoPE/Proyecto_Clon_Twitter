@@ -12,6 +12,10 @@ const publicController = {
   showLogin: async (req, res) => {
     res.render("login");
   },
+
+  showTwitterHome: async (req, res) => {
+    res.render("twitterHome");
+  }
 };
 
 module.exports = publicController;

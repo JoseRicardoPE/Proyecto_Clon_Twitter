@@ -6,7 +6,7 @@ const userController = {
     
   },
 
-  showHome: async (req, res) => {
+  showHomeUser: async (req, res) => {
     res.render("userProfile");
   },
 };
