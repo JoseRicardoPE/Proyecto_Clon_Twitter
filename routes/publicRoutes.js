@@ -1,14 +1,9 @@
 const express = require("express");
 const publicRouter = express.Router();
+const publicController = require("../controllers/publicController");
 
-publicRouter.get("/", (req, res) => {
-  res.render("home");
-});
-publicRouter.get("/register", (req, res) => {
-  res.render("register");
-});
-publicRouter.get("/login", (req, res) => {
-  res.render("login");
-});
+publicRouter.get("/", publicController.showHome);
+publicRouter.get("/register", publicController.showRegister);
+publicRouter.get("/login", publicController.showLogin);
 
 module.exports = publicRouter;

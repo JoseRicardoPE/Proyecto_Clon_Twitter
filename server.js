@@ -1,12 +1,14 @@
-const dbInitialSetup = require("./dbInitialSetup");
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const APP_PORT = 3001;
+const dbInitialSetup = require("./dbInitialSetup");
 const routes = require("./routes/routes");
 
+app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
-app.set("view engine", "ejs");
+app.use(express.json());
 
 dbInitialSetup();
 

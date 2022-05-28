@@ -1,8 +1,7 @@
 const express = require("express");
-const adminRouter = express.Router();
+const userRouter = express.Router();
+const userController = require("../controllers/userController")
 
-adminRouter.get("/home", (req, res) => {
-  res.render("userProfile");
-});
+userRouter.get("/home", userController.showHome);
 
-module.exports = adminRouter;
+module.exports = userRouter;
