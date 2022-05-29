@@ -1,0 +1,87 @@
+a{
+    style:none;
+}
+.page-separation{
+   background-color: rgb(244, 248, 247);
+   display: flex;
+   flex-direction: row;
+}
+.imagen-izq{
+    width: 100%;
+}
+.logo-tw{
+    width: 6%;
+    height: 6%;
+    
+}
+.right-part{
+    padding: 3%;  
+}
+.page-title{
+    margin-top: 7%;
+    font-size: 9.2vh;
+    font-weight: bolder;
+    color: black;
+}
+.second-title{
+    margin-top: 10%;
+    font-size: 4.2vh;
+    font-weight: bolder;
+    color: black;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 5%;
+}
+.boton{
+    width: 50%;
+    margin-top: 2%;
+    border-style: solid;
+    border-radius: 25px;
+    border-width: 0.1px;
+    border-color: rgb(84, 167, 240);
+    padding: 1%;
+    font-weight: 500;
+    background-color: white;
+}
+.politicas{
+    font-size: 1.3vh;
+}
+h5 {
+    margin-top: 5%;
+}
+.google-btn{
+    color: rgb(92, 94, 91);
+    font-weight: 400;
+    background-color: white;
+}
+.google-btn:hover{
+    background-color: rgb(244, 243, 252);
+}
+
+.apple-btn:hover{
+    background-color: rgb(171, 193, 233);
+
+}
+
+.telefono-btn{
+    background-color: rgba(29,155,240);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+.telefono-btn:hover{
+    background-color: rgb(13, 79, 167);
+    color: white;
+}
+.iniciar-btn{
+    text-align: center;
+    text-decoration: none;
+    color: rgba(29,155,240);
+}
+.iniciar-btn:hover{
+    background-color: rgb(244, 243, 252);
+    color: rgba(29,155,240);
+}

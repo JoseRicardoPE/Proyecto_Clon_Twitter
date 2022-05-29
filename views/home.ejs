@@ -2,15 +2,40 @@
 <html lang="en">
   <head>
     <%- include ('partials/myHead.ejs') %>
+    <link rel="stylesheet" href="/css/home.css" />
     <title>Home-Twitter</title>
   </head>
   <body>
-    <div class="">
-      <div>
-        <img class="w-50 h-100" src="/img/twitterHome.jpg" alt="Imagen" />
+    <div class="page-separation">
+      <div class="w-50">
+        <img class="h-100 imagen-izq" src="/img/twitterHome.jpg" alt="Imagen" />
       </div>
-      <div class="w-50 h-100">
-        <img src="/img/logoTwitter.png" alt="" />
+      <div class="w-50 h-100 right-part">
+        <img class="logo-tw" src="/img/logoTwitter.png" alt="logoTwitter" />
+        <h1 class="page-title">Lo que está pasando ahora</h1>
+        <h3 class="second-title">Únete a Twitter hoy mismo.</h3>
+        <div class="buttons">
+          <button type="button" class="boton google-btn">
+            Registrarse con Google
+          </button>
+          <button type="button" class="boton apple-btn">
+            Registrarse con Apple
+          </button>
+
+          <a href="/register" type="button" class="boton telefono-btn">
+            Registrarse con el número de teléfono
+          </a>
+          <p class="politicas">
+            Al registrarte, aceptas los Términos de servicio y la Política
+            <br />
+            de privacidad, incluida la política de Uso de Cookies.
+          </p>
+          <h5>¿Ya tienes una cuenta?</h5>
+
+          <a href="/login" type="button" class="boton iniciar-btn">
+            Iniciar sesión
+          </a>
+        </div>
       </div>
     </div>
 
