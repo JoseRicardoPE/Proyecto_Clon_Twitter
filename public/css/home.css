@@ -83,3 +83,15 @@ h5 {
     background-color: rgb(244, 243, 252);
     color: rgba(29,155,240);
 }
+@media (max-width: 900px) {
+    .imagen-izq {
+      display: none;
+    }
+    .right-part {
+        width: 100%;
+        margin: auto;
+    }
+    .page-separation{
+        flex-direction: column;
+    }
+  }
