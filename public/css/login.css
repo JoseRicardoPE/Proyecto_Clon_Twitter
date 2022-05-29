@@ -1,0 +1,93 @@
+/* Aqui se encuentran los estilos para login.ejs de clonTwitter */
+
+body {
+  background-color: black;
+}
+
+h2 {
+  color: rgb(247, 247, 247);
+}
+
+input.form-control {
+  max-width: 25em;
+}
+
+button.log-in-button {
+  max-width: 25em;
+  color: black;
+  background-color: rgb(233, 233, 233);
+  font-weight: bold;
+}
+
+img.logo {
+  width: 1.8em;
+}
+
+div.col-7 {
+  padding-left: 0;
+}
+
+#xmark {
+  width: 2em;
+}
+
+div.padding-xmark {
+  padding-left: 0;
+}
+
+div.p-2 {
+  margin-bottom: 10em;
+}
+
+div.container-fluid {
+  padding-right: 1em;
+}
+
+@media (min-width: 768px) {
+  .bg-twitter-color {
+    background-color: rgb(38, 46, 54);
+  }
+
+  .bg-black {
+    background-color: black;
+  }
+
+  div.container {
+    color: rgb(247, 247, 247);
+  }
+
+  .div-form-width {
+    width: 37em;
+  }
+
+  .form-padding {
+    padding: 1em 9em 5em;
+  }
+
+  .log-in-button {
+    color: black;
+    background-color: rgb(233, 233, 233);
+    font-weight: bold;
+  }
+
+  button.log-in-button:hover {
+    background-color: rgb(209, 209, 209);
+    color: black;
+  }
+
+  .logo {
+    width: 1.8em;
+  }
+
+  #xmark {
+    width: 2em;
+  }
+
+  .padding-xmark {
+    padding: 0 0.1em;
+  }
+
+  div.p-2 {
+    margin-bottom: 0;
+  }
+}
