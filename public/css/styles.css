@@ -9,7 +9,7 @@ body {
 .main {
   width: 75%;
   display: grid;
-  grid-template-columns: 275px auto 450px;
+  grid-template-columns: 275px auto 350px;
   margin: 0 auto;
   padding-top: 15px;
 }
@@ -72,10 +72,6 @@ body {
 
 .btn__menu:hover {
   background: #1576b6;
-}
-
-.main__aside--right {
-  position: fixed;
 }
 
 /* --- Main Section --- */
@@ -187,7 +183,13 @@ body {
   padding: 0px 20px;
 }
 
+.main__aside--right {
+  position: fixed;
+  width: 350px;
+}
+
 .search {
+  width: 100%;
   border: none;
   padding: 10px 80px;
   background: #202327;
@@ -195,4 +197,44 @@ body {
   border-radius: 20px;
   font-weight: 500;
   font-size: 15px;
+}
+
+.aside__trends{
+  width: 100%;
+  background: #1D1F23;
+  border-radius: 20px;
+  padding-bottom: 30px;
+}
+
+.aside__trends--title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #e7e9ea;
+  margin: 30px 0 10px;
+  padding: 10px 20px;
+}
+
+.aside__trends--content {
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+.aside__trends--content:hover{
+  background: #33363d67;
+  cursor: pointer;
+}
+
+.aside__trends--newsAditional {
+  font-size: 13px;
+  font-weight: 500;
+  color: #71767b;
+  padding: 0 20px;
+}
+
+.aside__trends--newsName {
+  font-size: 15px;
+  font-weight: 700;
+  color: #e7e9ea;
+  margin: 5px 0 2px;
+  padding: 0 20px;
 }
