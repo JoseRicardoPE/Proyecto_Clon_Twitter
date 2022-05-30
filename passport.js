@@ -1,6 +1,7 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const bcrypt = require("bcryptjs");
+const { compare } = require("bcryptjs");
 const User = require("./models/modelUser");
 
 module.exports = function (app) {
@@ -15,8 +16,8 @@ module.exports = function (app) {
         if (!user) {
           return cb(null, false, { message: "Datos incorrectos" });
         }
-        const compare = await compare(password, user.password);
-        if (compare) {
+        const isMatch = await compare(password, user.password);
+        if (isMatch) {
           return cb(null, user);
         }
         return cb(null, false, { message: "Datos incorrectos" });
