@@ -1,6 +1,7 @@
 const modelTweet = require("../models/modelTweet");
 const User = require("../models/modelUser");
 const passport = require("passport");
+const bcrypt = require("bcryptjs");
 
 const publicController = {
   showHome: async (req, res) => {
@@ -13,11 +14,14 @@ const publicController = {
 
   createUser: async (req, res) => {
     console.log(req.body);
+    const password = req.body.password;
+
+    const hash = await bcrypt.hash(password, 8);
     const newUser = new User({
       firstname: req.body.name,
       lastname: req.body.lastname,
       email: req.body.email,
-      password: req.body.password,
+      password: hash,
     });
     await newUser.save();
     res.redirect("/");
@@ -29,7 +33,7 @@ const publicController = {
 
   showTwitterHome: async (req, res) => {
     const users = await User.find({});
-    res.render("twitterHome", {users });
+    res.render("twitterHome", { users });
   },
   login: (req, res) => {},
 };
