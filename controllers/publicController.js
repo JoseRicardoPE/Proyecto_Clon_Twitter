@@ -16,6 +16,12 @@ const publicController = {
   showTwitterHome: async (req, res) => {
     res.render("twitterHome");
   },
+  login: (req, res) => {
+    passport.authenticate("local", {
+      successRedirect: "/twitterHome",
+      failureRedirect: "/login",
+    });
+  },
 };
 
 module.exports = publicController;
