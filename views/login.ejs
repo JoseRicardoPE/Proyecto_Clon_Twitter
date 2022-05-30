@@ -2,10 +2,69 @@
 <html lang="en">
   <head>
     <%- include ('partials/myHead.ejs') %>
+    <link rel="stylesheet" href="/css/login.css" />
     <title>Login-Twitter</title>
   </head>
   <body>
-    <h1>Login</h1>
+    <div class="container-fluid bg-twitter-color vh-100 pt-5">
+      <div class="container bg-black rounded-4 div-form-width">
+        <div class="row">
+          <div class="col">
+            <div id="div-p2" class="row p-2">
+              <div class="col-5 padding-xmark">
+                <a href="/">
+                  <img id="xmark" src="/img/xmark.png" alt="xmark" />
+                </a>
+              </div>
+              <div class="col-7">
+                <img
+                  src="/img/twitter.svg"
+                  alt="logo-twitter"
+                  class="logo ms-4 mt-1"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col form-padding">
+                <form action="" method="post">
+                  <h2>Sign in to Twitter</h2>
+                  <div class="input-group mb-4 mt-4">
+                    <input
+                      type="text"
+                      class="form-control bg-black border-secondary text-white"
+                      placeholder="Email"
+                      aria-label="Username"
+                      aria-describedby="basic-addon1"
+                      name="email"
+                    />
+                  </div>
+                  <div class="input-group mb-5">
+                    <input
+                      type="text"
+                      class="form-control bg-black border border-secondary text-white"
+                      placeholder="Password"
+                      aria-label="Username"
+                      aria-describedby="basic-addon1"
+                      name="password"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-outline-secondary mb-5 rounded-pill log-in-button px-5 w-100"
+                  >
+                    Log in
+                  </button>
+                </form>
+                <p class="text-secondary">
+                  Don't have an account?
+                  <a class="text-decoration-none" href="/register">Sign up</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script
       src="https://kit.fontawesome.com/849e8c00db.js"
