@@ -1,15 +1,26 @@
+const mongoose = require("mongoose");
+const { faker } = require("@faker-js/faker");
 const User = require("../models/modelUser");
 
-module.exports = async () => {
-  const user = await new User({
-    firstname: "Juan",
-    lastname: "Pérez",
-    email: "juan@hotmail.com",
-    password: "hola",
-    description: "hola",
-    avatar: "hola",
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  });
-  user.save();
+// Borramos la colección
+// db.collection("User").drop();
+
+// Seeder para "User"
+
+const createUsers = async () => {
+  for (let i = 0; i < 10; i++) {
+    const user = await new User({
+      firstname: faker.name.firstName(),
+      lastname: faker.name.lastName(),
+      email: faker.internet.email(),
+      password: "123",
+      description: faker.lorem.paragraph(),
+      avatar: faker.image.avatar(),
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+    user.save();
+  }
 };
+
+module.exports = createUsers;
