@@ -62,6 +62,7 @@ p {
 }
 
 .cross-button {
+  color: black;
   width: 36px;
   height: 36px;
   margin: 20px;
