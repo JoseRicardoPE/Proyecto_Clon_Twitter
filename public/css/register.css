@@ -1,0 +1,160 @@
+input {
+  width: 100%;
+}
+
+h1 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 30px;
+  font-weight: 700 (bold);
+  letter-spacing: 0px;
+}
+
+h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+}
+
+h5 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px / 20px (1.333);
+  color: #0f1419;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(29, 155, 240);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: rgb(29, 155, 240);
+}
+
+p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 400 (normal);
+  color: rgb(15, 20, 25);
+  line-height: 20px;
+}
+
+.contenedor {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-box {
+  text-align: left;
+  background-color: white;
+  border-radius: 16px;
+  width: 600px;
+}
+
+.cross-button {
+  width: 36px;
+  height: 36px;
+  margin: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  transition-property: background-color;
+  transition-duration: 0.2s;
+}
+
+.cross-button:hover {
+  background-color: rgba(15, 20, 25, 0.1);
+}
+
+.form-container {
+  height: 420px;
+  padding: 10px 80px 10px;
+  overflow: auto;
+}
+
+.form-control:focus {
+  color: rgb(29, 155, 240);
+  border-color: rgb(29, 155, 240);
+  box-shadow: none;
+}
+
+.form-floating > label {
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out,
+    color 0.1s ease-in-out;
+}
+
+.form-floating:focus > label {
+  color: rgb(29, 155, 240);
+}
+
+.input-month {
+  width: 198px;
+  margin-right: 12px;
+}
+
+.input-day {
+  width: 86.5px;
+  margin-right: 12px;
+}
+
+.input-year {
+  width: 108.5px;
+}
+
+.button {
+  display: block;
+  width: 80%;
+  border-style: solid;
+  border-radius: 25px;
+  padding: 2%;
+  margin: 0 auto 20px;
+  font-weight: 500;
+  font-size: 100%;
+  background-color: rgb(15, 20, 25);
+  border-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-family: Arial;
+  font-weight: 700 (bold);
+}
+
+.button:hover {
+  background-color: rgb(15, 20, 25, 0.9);
+}
+
+.register-button {
+  display: block;
+  width: 80%;
+  border-style: solid;
+  border-radius: 25px;
+  padding: 2%;
+  margin: 0 auto 20px;
+  font-weight: bold;
+  font-size: 100%;
+  background-color: rgb(29, 155, 240, 0.9);
+  border-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-family: Arial;
+  font-weight: 700 (bold);
+}
+
+.register-button:hover {
+  background-color: rgb(29, 155, 240);
+}
+
+.checkbox {
+  /* width: 100px; */
+  height: 20px;
+}
+
+.warning {
+  color: rgb(83, 100, 113);
+}

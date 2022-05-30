@@ -6,7 +6,7 @@ const publicController = {
   },
 
   showRegister: async (req, res) => {
-    res.render("register");
+    res.render("register1");
   },
 
   showLogin: async (req, res) => {
@@ -15,7 +15,7 @@ const publicController = {
 
   showTwitterHome: async (req, res) => {
     res.render("twitterHome");
-  }
+  },
 };
 
 module.exports = publicController;
