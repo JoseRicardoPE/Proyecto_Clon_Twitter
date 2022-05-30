@@ -6,7 +6,7 @@ const publicController = {
   },
 
   showRegister: async (req, res) => {
-    res.render("register1");
+    res.render("register");
   },
 
   showLogin: async (req, res) => {
