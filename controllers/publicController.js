@@ -1,4 +1,5 @@
 const modelTweet = require("../models/modelTweet");
+const passport = require("passport");
 
 const publicController = {
   showHome: async (req, res) => {
