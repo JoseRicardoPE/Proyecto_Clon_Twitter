@@ -15,15 +15,22 @@ const publicController = {
   createUser: async (req, res) => {
     console.log(req.body);
     const password = req.body.password;
+    const user = await User.findOne({ email: req.body.email });
 
     const hash = await bcrypt.hash(password, 8);
-    const newUser = new User({
-      firstname: req.body.name,
-      lastname: req.body.lastname,
-      email: req.body.email,
-      password: hash,
-    });
-    await newUser.save();
+
+    if (!user) {
+      const newUser = new User({
+        firstname: req.body.name,
+        lastname: req.body.lastname,
+        email: req.body.email,
+        password: hash,
+      });
+      await newUser.save();
+    } else {
+      res.send("Este email ya está siendo utilizado");
+    }
+
     res.redirect("/");
   },
 
