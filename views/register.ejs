@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%- include ('partials/myHead.ejs') %>
     <title>Registro de Twitter / Twitter</title>
     <link
@@ -48,7 +45,17 @@
               />
               <label for="name">Nombre</label>
             </div>
-            <div class="form-floating">
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="lastname"
+                placeholder="Apellido"
+              />
+              <label for="lastname">Apellido</label>
+            </div>
+
+            <div class="form-floating mb-3">
               <input
                 type="email"
                 class="form-control"
@@ -56,6 +63,15 @@
                 placeholder="Correo electrónico"
               />
               <label for="email">Correo electrónico</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="password"
+                placeholder="Contraseña"
+              />
+              <label for="password">Contraseña</label>
             </div>
             <div class="d-flex justify-content-end mt-2 mb-4">
               <a href="" class="text-right">Usar teléfono</a>
@@ -103,11 +119,12 @@
                 <label for="year">Año</label>
               </div>
             </div>
+            <button type="submit">Enviar datos</button>
           </form>
+          <!-- <button type="submit" id="button-1" class="button mt-3">
+            Siguiente
+          </button> -->
         </div>
-        <button type="submit" id="button-1" class="button mt-3">
-          Siguiente
-        </button>
       </div>
       <div id="contenedor-2" class="register-box pt-3 ocultar">
         <div class="d-flex align-items-center px-2">
@@ -166,7 +183,16 @@
                 id="name"
                 placeholder="Nombre"
               />
-              <label for="name">Nombre</label>
+              <label for="name">Apellido</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="lastname"
+                placeholder="Nombre"
+              />
+              <label for="name">lastname</label>
             </div>
             <div class="form-floating mb-3">
               <input
@@ -176,6 +202,15 @@
                 placeholder="Correo electrónico"
               />
               <label for="email">Correo electrónico</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="password"
+                placeholder="Contaseña"
+              />
+              <label for="password">Contraseña</label>
             </div>
             <div class="form-floating mb-3">
               <input
