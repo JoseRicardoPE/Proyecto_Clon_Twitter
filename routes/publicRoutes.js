@@ -5,6 +5,7 @@ const passport = require("passport");
 
 publicRouter.get("/", publicController.showHome);
 publicRouter.get("/register", publicController.showRegister);
+publicRouter.post("/register", publicController.createUser);
 publicRouter.get("/login", publicController.showLogin);
 publicRouter.post(
   "/login",
