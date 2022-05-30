@@ -75,31 +75,27 @@
       </header>
       <main class="main__section">
         <a href="#" class="main__section--link--tweet">
+          <% for (const data of users) { %> 
           <div class="tweet">
             <img
-              src="/img/citizen1.jpg"
+              src=<%= data.avatar %> 
               alt="image_girl"
               class="tweet__author--img"
             />
             <section class="tweet__section">
               <div class="tweet__header">
                 <div class="tweet__author--name">
-                  <span>Sandra Restrepo</span>
+                  <span><%= data.firstname %> </span>
                 </div>
                 <div class="tweet__author--nickname">
-                  <span>@sandrarestrepo</span>
+                  <span><%= data.email %> </span>
                 </div>
                 <div class="tweet__author--date">
                   <span>4h</span>
                 </div>
               </div>
               <div class="tweet__content">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-                  eaque officia quidem deleniti dolorum dolor nobis illo ipsa
-                  laborum. Impedit dignissimos repudiandae, officiis quia
-                  corrupti sunt quam dolorum aut atque!
-                </p>
+                <p><%= data.description %> </p>
                 <img
                   class="tweet__content--img"
                   src="/img/imagen2.jpg"
@@ -158,87 +154,7 @@
               </div>
             </section>
           </div>
-        </a>
-        <a href="#" class="main__section--link--tweet">
-          <div class="tweet">
-            <img
-              src="/img/citizen1.jpg"
-              alt="image_girl"
-              class="tweet__author--img"
-            />
-            <section class="tweet__section">
-              <div class="tweet__header">
-                <div class="tweet__author--name">
-                  <span>Laura Cañón</span>
-                </div>
-                <div class="tweet__author--nickname">
-                  <span>@laucanon</span>
-                </div>
-                <div class="tweet__author--date">
-                  <span>4h</span>
-                </div>
-              </div>
-              <div class="tweet__content">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-                  eaque officia quidem deleniti dolorum dolor nobis illo ipsa
-                  laborum. Impedit dignissimos repudiandae, officiis quia
-                  corrupti sunt quam dolorum aut atque!
-                </p>
-                <img class="tweet__content--img" src="/img/img.jpg" alt="" />
-              </div>
-              <div class="tweet__footer">
-                <div class="tweet__footer--icon">
-                  <button
-                    type="submit"
-                    class="tweet__footer--btn tweet__footer--btn--response"
-                  >
-                    <img
-                      src="/img/response.svg"
-                      alt="image_dialog"
-                      class="tweet__footer--img tweet__footer--img--response"
-                    />
-                  </button>
-                </div>
-                <div class="tweet__footer--icon">
-                  <button
-                    type="submit"
-                    class="tweet__footer--btn tweet__footer--btn--retweet"
-                  >
-                    <img
-                      src="/img/retweet.svg"
-                      alt="image_dialog"
-                      class="tweet__footer--img"
-                    />
-                  </button>
-                </div>
-                <div class="tweet__footer--icon">
-                  <button
-                    type="submit"
-                    class="tweet__footer--btn tweet__footer--btn--like"
-                  >
-                    <img
-                      src="/img/like.svg"
-                      alt="image_dialog"
-                      class="tweet__footer--img"
-                    />
-                  </button>
-                </div>
-                <div class="tweet__footer--icon">
-                  <button
-                    type="submit"
-                    class="tweet__footer--btn tweet__footer--btn--share"
-                  >
-                    <img
-                      src="/img/share.svg"
-                      alt="image_dialog"
-                      class="tweet__footer--img"
-                    />
-                  </button>
-                </div>
-              </div>
-            </section>
-          </div>
+          <% } %> 
         </a>
       </main>
       <aside class="main__aside">

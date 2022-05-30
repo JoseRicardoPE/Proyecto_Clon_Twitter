@@ -28,7 +28,8 @@ const publicController = {
   },
 
   showTwitterHome: async (req, res) => {
-    res.render("twitterHome");
+    const users = await User.find({});
+    res.render("twitterHome", {users });
   },
   login: (req, res) => {},
 };

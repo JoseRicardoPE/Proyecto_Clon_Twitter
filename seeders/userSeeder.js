@@ -2,9 +2,6 @@ const mongoose = require("mongoose");
 const { faker } = require("@faker-js/faker");
 const User = require("../models/modelUser");
 
-// Borramos la colección
-// db.collection("User").drop();
-
 // Seeder para "User"
 
 const createUsers = async () => {
