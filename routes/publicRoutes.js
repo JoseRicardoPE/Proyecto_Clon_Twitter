@@ -8,7 +8,7 @@ publicRouter.get("/register", publicController.showRegister);
 publicRouter.get("/login", publicController.showLogin);
 publicRouter.post(
   "/login",
-  passport.authenticate("local", {
+  passport.authenticate("local-signup", {
     successRedirect: "/twitterHome",
     failureRedirect: "/login",
   })

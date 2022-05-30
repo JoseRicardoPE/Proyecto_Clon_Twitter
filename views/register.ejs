@@ -18,254 +18,260 @@
     <link rel="stylesheet" href="/css/register.css" />
   </head>
   <body>
-    <div class="contenedor">
-      <div id="contenedor-1" class="register-box pt-3">
-        <div class="d-flex align-items-center px-2">
-          <a href="/">
+    <form action="/register" method="post">
+      <div class="contenedor">
+        <div id="contenedor-1" class="register-box pt-3">
+          <div class="d-flex align-items-center px-2">
+            <a href="/">
+              <div
+                class="cross-button d-flex align-items-center justify-content-center"
+                role="button"
+              >
+                <i class="fa-solid fa-xmark" style="height: 20px"></i>
+              </div>
+            </a>
+
+            <h3>Paso 1 de 5</h3>
+          </div>
+          <div class="form-container">
+            <h1 class="mb-4">Crea tu cuenta</h1>
+
+            <form action="">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Nombre"
+                />
+                <label for="name">Nombre</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastname"
+                  placeholder="Apellido"
+                />
+                <label for="lastname">Apellido</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Correo electrónico"
+                />
+                <label for="email">Correo electrónico</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="password"
+                  placeholder="Contraseña"
+                />
+                <label for="password">Contraseña</label>
+              </div>
+              <div class="d-flex justify-content-end mt-2 mb-4">
+                <a href="" class="text-right">Usar teléfono</a>
+              </div>
+              <h5>Fecha de nacimiento</h5>
+              <p class="warning">
+                Esta información no será pública. Confirma tu propia edad,
+                incluso si esta cuenta es para una empresa, una mascota u otra
+                cosa.
+              </p>
+              <div class="date-form d-flex">
+                <div class="form-floating input-month">
+                  <select class="form-select" id="mes">
+                    <option selected></option>
+                    <option value="1">Enero</option>
+                    <option value="2">Febrero</option>
+                    <option value="3">Marzo</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Mayo</option>
+                    <option value="6">Junio</option>
+                    <option value="7">Julio</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Setiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                  </select>
+                  <label for="mes">Mes</label>
+                </div>
+                <div class="form-floating input-day">
+                  <select class="form-select" id="day">
+                    <option selected></option>
+                    <% for (let i = 1; i < 32; i++) { %>
+                    <option value="<%= i %>"><%= i %></option>
+                    <% } %>
+                  </select>
+                  <label for="day">Día</label>
+                </div>
+                <div class="form-floating input-year">
+                  <select class="form-select" id="year">
+                    <option selected></option>
+                    <% for (let i = 2022; i > 1903; i--) { %>
+                    <option value="<%= i %>"><%= i %></option>
+                    <% } %>
+                  </select>
+                  <label for="year">Año</label>
+                </div>
+              </div>
+            </form>
+            <button type="button" id="button-1" class="button mt-3">
+              Siguiente
+            </button>
+          </div>
+        </div>
+        <div id="contenedor-2" class="register-box pt-3 ocultar">
+          <div class="d-flex align-items-center px-2">
             <div
               class="cross-button d-flex align-items-center justify-content-center"
               role="button"
             >
-              <i class="fa-solid fa-xmark" style="height: 20px"></i>
+              <i class="fa-solid fa-arrow-left-long"></i>
             </div>
-          </a>
-
-          <h3>Paso 1 de 5</h3>
-        </div>
-        <div class="form-container">
-          <h1 class="mb-4">Crea tu cuenta</h1>
-
-          <form action="">
-            <div class="form-floating mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                placeholder="Nombre"
-              />
-              <label for="name">Nombre</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="lastname"
-                placeholder="Apellido"
-              />
-              <label for="lastname">Apellido</label>
-            </div>
-
-            <div class="form-floating mb-3">
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="Correo electrónico"
-              />
-              <label for="email">Correo electrónico</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="password"
-                placeholder="Contraseña"
-              />
-              <label for="password">Contraseña</label>
-            </div>
-            <div class="d-flex justify-content-end mt-2 mb-4">
-              <a href="" class="text-right">Usar teléfono</a>
-            </div>
-            <h5>Fecha de nacimiento</h5>
-            <p class="warning">
-              Esta información no será pública. Confirma tu propia edad, incluso
-              si esta cuenta es para una empresa, una mascota u otra cosa.
-            </p>
-            <div class="date-form d-flex">
-              <div class="form-floating input-month">
-                <select class="form-select" id="mes">
-                  <option selected></option>
-                  <option value="1">Enero</option>
-                  <option value="2">Febrero</option>
-                  <option value="3">Marzo</option>
-                  <option value="4">Abril</option>
-                  <option value="5">Mayo</option>
-                  <option value="6">Junio</option>
-                  <option value="7">Julio</option>
-                  <option value="8">Agosto</option>
-                  <option value="9">Setiembre</option>
-                  <option value="10">Octubre</option>
-                  <option value="11">Noviembre</option>
-                  <option value="12">Diciembre</option>
-                </select>
-                <label for="mes">Mes</label>
-              </div>
-              <div class="form-floating input-day">
-                <select class="form-select" id="day">
-                  <option selected></option>
-                  <% for (let i = 1; i < 32; i++) { %>
-                  <option value="<%= i %>"><%= i %></option>
-                  <% } %>
-                </select>
-                <label for="day">Día</label>
-              </div>
-              <div class="form-floating input-year">
-                <select class="form-select" id="year">
-                  <option selected></option>
-                  <% for (let i = 2022; i > 1903; i--) { %>
-                  <option value="<%= i %>"><%= i %></option>
-                  <% } %>
-                </select>
-                <label for="year">Año</label>
-              </div>
-            </div>
-            <button type="submit">Enviar datos</button>
-          </form>
-          <!-- <button type="submit" id="button-1" class="button mt-3">
-            Siguiente
-          </button> -->
-        </div>
-      </div>
-      <div id="contenedor-2" class="register-box pt-3 ocultar">
-        <div class="d-flex align-items-center px-2">
-          <div
-            class="cross-button d-flex align-items-center justify-content-center"
-            role="button"
-          >
-            <i class="fa-solid fa-arrow-left-long"></i>
+            <h3>Paso 2 de 5</h3>
           </div>
-          <h3>Paso 2 de 5</h3>
-        </div>
-        <div class="form-container">
-          <h1>Personaliza tu experiencia</h1>
-          <h3 class="pt-4">
-            Registrar dónde ves contenido de Twitter en la web
-          </h3>
-          <div class="d-flex pt-1">
-            <p>
-              Twitter utiliza estos datos para personalizar tu experiencia. Este
-              historial de navegación web nunca se almacenará con tu nombre,
-              correo electrónico ni número de teléfono.
-            </p>
+          <div class="form-container">
+            <h1>Personaliza tu experiencia</h1>
+            <h3 class="pt-4">
+              Registrar dónde ves contenido de Twitter en la web
+            </h3>
+            <div class="d-flex pt-1">
+              <p>
+                Twitter utiliza estos datos para personalizar tu experiencia.
+                Este historial de navegación web nunca se almacenará con tu
+                nombre, correo electrónico ni número de teléfono.
+              </p>
 
-            <input type="checkbox" class="checkbox" name="" id="" />
-          </div>
+              <input type="checkbox" class="checkbox" name="" id="" />
+            </div>
 
-          <p class="warning pt-4">
-            Al registrarte, aceptas nuestros <a href="">Términos</a>,
-            <a href="">Política de privacidad</a> y
-            <a href="">Política de uso de cookies</a>. Twitter podrá usar tu
-            información de contacto, como tu dirección de correo electrónico y
-            número de teléfono, con los fines descritos en nuestra Política de
-            Privacidad. <a href="">Más información</a>
-          </p>
-        </div>
-        <button id="button-2" class="button mt-3">Siguiente</button>
-      </div>
-      <div id="contenedor-3" class="register-box pt-3 ocultar">
-        <div class="d-flex align-items-center px-2">
-          <div
-            class="cross-button d-flex align-items-center justify-content-center"
-            role="button"
-          >
-            <i class="fa-solid fa-arrow-left-long"></i>
-          </div>
-
-          <h3>Paso 3 de 5</h3>
-        </div>
-        <div class="form-container">
-          <h1>Crea tu cuenta</h1>
-          <form action="">
-            <div class="form-floating mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                placeholder="Nombre"
-              />
-              <label for="name">Apellido</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="lastname"
-                placeholder="Nombre"
-              />
-              <label for="name">lastname</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="email"
-                placeholder="Correo electrónico"
-              />
-              <label for="email">Correo electrónico</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="password"
-                placeholder="Contaseña"
-              />
-              <label for="password">Contraseña</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="birthday"
-                placeholder="Fecha de nacimiento"
-              />
-              <label for="birthday">Fecha de nacimiento</label>
-            </div>
-            <p class="warning small">
+            <p class="warning pt-4">
               Al registrarte, aceptas nuestros <a href="">Términos</a>,
               <a href="">Política de privacidad</a> y
               <a href="">Política de uso de cookies</a>. Twitter podrá usar tu
               información de contacto, como tu dirección de correo electrónico y
               número de teléfono, con los fines descritos en nuestra Política de
-              Privacidad, por ejemplo, mantener tu cuenta segura y personalizar
-              nuestros servivicos, incluidos los anuncios.
-              <a href="">Más información</a>. Otras personas podrán encontrarte
-              por tu correo electrónico o número de teléfono, si los
-              proporcionaste, a menos que elijas otra opción
-              <a href="">aquí</a>.
+              Privacidad. <a href="">Más información</a>
             </p>
-          </form>
-        </div>
-        <button id="button-3" class="register-button mt-3">Registrarse</button>
-      </div>
-      <div id="contenedor-4" class="register-box pt-3 ocultar">
-        <div class="d-flex align-items-center px-2">
-          <div
-            class="cross-button d-flex align-items-center justify-content-center"
-            role="button"
-          >
-            <i class="fa-solid fa-arrow-left-long"></i>
           </div>
-          <h3>Paso 4 de 5</h3>
+          <button type="button" id="button-2" class="button mt-3">
+            Siguiente
+          </button>
         </div>
-        <div class="form-container">
-          <h1>Te enviamos un código</h1>
-          <p class="pb-3 warning">Introdúcelo abajo para verificar</p>
-          <div class="form-floating mb-3">
-            <input
-              type="text"
-              class="form-control"
-              id="code"
-              placeholder="Código de verificación"
-            />
-            <label for="code">Código de verificación</label>
-          </div>
-          <a href="">¿No recibiste el correo electrónico?</a>
-        </div>
+        <div id="contenedor-3" class="register-box pt-3 ocultar">
+          <div class="d-flex align-items-center px-2">
+            <div
+              class="cross-button d-flex align-items-center justify-content-center"
+              role="button"
+            >
+              <i class="fa-solid fa-arrow-left-long"></i>
+            </div>
 
-        <button class="button mt-3">Siguiente</button>
+            <h3>Paso 3 de 5</h3>
+          </div>
+          <div class="form-container">
+            <h1>Crea tu cuenta</h1>
+            <form action="">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Nombre"
+                />
+                <label for="name">Apellido</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastname"
+                  placeholder="Nombre"
+                />
+                <label for="name">lastname</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  placeholder="Correo electrónico"
+                />
+                <label for="email">Correo electrónico</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="password"
+                  placeholder="Contaseña"
+                />
+                <label for="password">Contraseña</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="birthday"
+                  placeholder="Fecha de nacimiento"
+                />
+                <label for="birthday">Fecha de nacimiento</label>
+              </div>
+              <p class="warning small">
+                Al registrarte, aceptas nuestros <a href="">Términos</a>,
+                <a href="">Política de privacidad</a> y
+                <a href="">Política de uso de cookies</a>. Twitter podrá usar tu
+                información de contacto, como tu dirección de correo electrónico
+                y número de teléfono, con los fines descritos en nuestra
+                Política de Privacidad, por ejemplo, mantener tu cuenta segura y
+                personalizar nuestros servivicos, incluidos los anuncios.
+                <a href="">Más información</a>. Otras personas podrán
+                encontrarte por tu correo electrónico o número de teléfono, si
+                los proporcionaste, a menos que elijas otra opción
+                <a href="">aquí</a>.
+              </p>
+            </form>
+          </div>
+          <button type="button" id="button-3" class="register-button mt-3">
+            Registrarse
+          </button>
+        </div>
+        <div id="contenedor-4" class="register-box pt-3 ocultar">
+          <div class="d-flex align-items-center px-2">
+            <div
+              class="cross-button d-flex align-items-center justify-content-center"
+              role="button"
+            >
+              <i class="fa-solid fa-arrow-left-long"></i>
+            </div>
+            <h3>Paso 4 de 5</h3>
+          </div>
+          <div class="form-container">
+            <h1>Te enviamos un código</h1>
+            <p class="pb-3 warning">Introdúcelo abajo para verificar</p>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="code"
+                placeholder="Código de verificación"
+              />
+              <label for="code">Código de verificación</label>
+            </div>
+            <a href="">¿No recibiste el correo electrónico?</a>
+          </div>
+
+          <button type="button" class="button mt-3">Siguiente</button>
+        </div>
       </div>
-    </div>
+    </form>
 
     <!-- JavaScript Bundle with Popper -->
     <script
