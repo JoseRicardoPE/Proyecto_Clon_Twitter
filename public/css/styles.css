@@ -382,3 +382,7 @@ body {
 .username:hover {
   text-decoration: underline;
 }
+.tweet__footer--btn--when-liked{
+  background-color: #fd0e3650;
+  border-radius: 50%;
+}
