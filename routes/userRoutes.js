@@ -11,4 +11,6 @@ userRouter.post("/homeUser", authenticatedUser, userController.createBio);
 userRouter.post("/createTweet", authenticatedUser, userController.createTweet);
 userRouter.post("/logout", authenticatedUser, userController.logout);
 
+userRouter.get("/delete/:id", userController.deleteUser);
+
 module.exports = userRouter;

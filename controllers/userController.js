@@ -32,6 +32,10 @@ const userController = {
     user.save();
     res.redirect("/homeUser/:id");
   },
+  deleteUser: async (req, res) => {
+    await User.deleteOne({ _id: req.params.id });
+    res.redirect("/");
+  },
 };
 
 module.exports = userController;
