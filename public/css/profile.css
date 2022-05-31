@@ -3,20 +3,19 @@ h5 {
 }
 
 .btn__logOut {
-  width: 235px;
   margin-top: 10px;
   border: none;
-  padding: 15px 85px;
+  padding: 15px 66px;
   border-radius: 30px;
-  background: rgb(255, 255, 255, 0.8);
-  color: black;
+  background: #1a8cd8;
+  color: #e7e9ea;
   font-size: 17px;
   font-weight: 700;
   transition: 0.3s background;
 }
 
 .btn__logOut:hover {
-  background: white;
+  background: #1576b6;
 }
 
 .btn__edit {
@@ -56,16 +55,19 @@ h5 {
 }
 
 .btn__eliminar {
-  width: 235px;
   margin-top: 10px;
   border: none;
-  padding: 15px 85px;
+  padding: 15px 52px;
   border-radius: 30px;
-  background: rgb(255, 255, 255, 0.8);
-  color: black;
-  font-size: 12px;
+  background: #1a8cd8;
+  color: #e7e9ea;
+  font-size: 17px;
   font-weight: 700;
   transition: 0.3s background;
+}
+
+.btn__eliminar:hover {
+  background: #1576b6;
 }
 
 .edit-container {
