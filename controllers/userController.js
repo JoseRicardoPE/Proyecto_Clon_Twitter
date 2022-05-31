@@ -19,6 +19,7 @@ const userController = {
       content: req.body.content,
     });
     await newTweet.save();
+    res.redirect("/twitterHome");
   },
   logout: (req, res, next) => {
     req.logout(function (err) {
