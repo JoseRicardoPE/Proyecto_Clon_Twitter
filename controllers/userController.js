@@ -6,9 +6,11 @@ const userController = {
   addUser: async (req, res) => {},
 
   showHomeUser: async (req, res) => {
-    console.log(req.params);
+    const loggedUserId = req.user.id;
+    const userId = req.params.id;
+    console.log(loggedUserId, userId);
     const user = await User.findOne({ _id: req.params.id });
-    res.render("userProfile", { user });
+    res.render("userProfile", { user, loggedUserId, userId });
   },
 
   createTweet: async (req, res) => {

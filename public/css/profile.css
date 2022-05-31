@@ -3,6 +3,7 @@ h5 {
 }
 
 .btn__logOut {
+  width: 235px;
   margin-top: 10px;
   border: none;
   padding: 15px 85px;
@@ -52,6 +53,19 @@ h5 {
 
 .ocultar {
   display: none;
+}
+
+.btn__eliminar {
+  width: 235px;
+  margin-top: 10px;
+  border: none;
+  padding: 15px 85px;
+  border-radius: 30px;
+  background: rgb(255, 255, 255, 0.8);
+  color: black;
+  font-size: 12px;
+  font-weight: 700;
+  transition: 0.3s background;
 }
 
 .edit-container {
