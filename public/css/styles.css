@@ -179,6 +179,82 @@ body {
   width: 20px;
 }
 
+/* --- Ventana modal tweet --- */
+.section__modal--tweet{
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(81, 93, 112, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+}
+
+.section__modal--content{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 500px;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000000;
+  border-radius: 20px;
+  
+}
+
+.section__modal--user{
+  display: flex;
+  height: 200px;
+  border-bottom: 1px solid #5454547b;
+  margin: 20px 0;
+}
+
+.section__modal--img{
+  width: 60px;
+  height: 65px;
+  border-radius: 50%;
+}
+
+.section__modal--text{
+  margin-left: 10px;
+  width: 380px;
+  height: 180px;
+  border: none;
+  resize: none;
+  background-color: #000000;
+  color: grey;
+  outline: none;
+}
+
+.section__modal--btnSubmit{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn__submit--tweet{
+  border: none;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #e7e9ea;
+  background: #1a8cd8;
+}
+
+.btn__submit--tweet:hover{
+  background: #1986ce;
+}
+
+.close__modal{
+  cursor: pointer;
+  font-size: 18px;
+}
+
 /* --- Main Aside --- */
 .main__aside {
   padding: 0px 20px;

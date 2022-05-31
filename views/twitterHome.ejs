@@ -69,11 +69,29 @@
             </a>
           </div>
           <div class="header__menu--btn">
-            <button class="btn__menu" type="submit">Twittear</button>
+            <button class="btn__menu" id="btn__menu--twittear" type="submit">Twittear</button>
           </div>
         </div>
       </header>
       <main class="main__section">
+        <section class="section__modal--tweet" id="section__modal--tweet">
+          <div class="section__modal--content">
+            <div class="section__modal--close">
+              <span class="close__modal" id="close__modal">X</span>
+            </di>
+            <div class="section__modal--user">
+              <img src="/img/citizen1.jpg" alt="" class="section__modal--img">
+              <div class="section__modal--textArea">
+                <textarea name="content" class="section__modal--text" id="section__modal--text" placeholder="What's happening?"></textarea>
+              </div>
+            </div>
+            <div class="section__modal--btnSubmit">
+              <button type="submit" class="btn__submit--tweet" id="btn__submit--tweet">
+                Tweet
+              </button>
+            </div>
+          </div>
+        </section>
         <a href="#" class="main__section--link--tweet">
           <% for (const data of users) { %> 
           <div class="tweet">
@@ -263,5 +281,6 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="/js/scriptModal.js"></script>
   </body>
 </html>
