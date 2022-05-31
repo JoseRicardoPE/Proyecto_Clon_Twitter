@@ -33,7 +33,7 @@ const userController = {
     const user = await User.findById(req.user.id);
     user.description = req.body.description;
     user.save();
-    res.redirect("/homeUser/:id");
+    res.redirect(`/homeUser/${req.user.id}`);
   },
   deleteUser: async (req, res) => {
     await User.deleteOne({ _id: req.params.id });
