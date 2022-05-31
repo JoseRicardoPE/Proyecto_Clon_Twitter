@@ -69,41 +69,65 @@
             </a>
           </div>
           <div class="header__menu--btn">
-            <button class="btn__menu" id="btn__menu--twittear" type="submit">Twittear</button>
+            <button class="btn__menu" id="btn__menu--twittear" type="submit">
+              Twittear
+            </button>
           </div>
         </div>
       </header>
       <main class="main__section">
-        <section class="ocultar section__modal--tweet" id="section__modal--tweet">
+        <section
+          class="ocultar section__modal--tweet"
+          id="section__modal--tweet"
+        >
           <div class="section__modal--content">
             <div class="section__modal--close">
               <span class="close__modal" id="close__modal">X</span>
-            </di>
-            <div class="section__modal--user">
-              <img src="/img/citizen1.jpg" alt="" class="section__modal--img">
-              <div class="section__modal--textArea">
-                <textarea name="content" class="section__modal--text" id="section__modal--text" placeholder="What's happening?"></textarea>
+            </div>
+            <form action="createTweet" method="post">
+              <div class="section__modal--user">
+                <img
+                  src="/img/citizen1.jpg"
+                  alt=""
+                  class="section__modal--img"
+                />
+                <div class="section__modal--textArea">
+                  <textarea
+                    name="content"
+                    class="section__modal--text"
+                    id="section__modal--text"
+                    placeholder="What's happening?"
+                  ></textarea>
+                </div>
               </div>
-            </div>
-            <div class="section__modal--btnSubmit">
-              <button type="submit" class="btn__submit--tweet" id="btn__submit--tweet">
-                Tweet
-              </button>
-            </div>
+              <div class="section__modal--btnSubmit">
+                <button
+                  type="submit"
+                  class="btn__submit--tweet"
+                  id="btn__submit--tweet"
+                >
+                  Tweet
+                </button>
+              </div>
+            </form>
           </div>
         </section>
         <a href="#" class="main__section--link--tweet">
-          <% for (const data of users) { %> 
+          <% for (const data of users) { %>
           <div class="tweet">
             <img
-              src=<%= data.avatar %> 
+              src="<%=data.avatar %>"
               alt="image_girl"
               class="tweet__author--img"
             />
             <section class="tweet__section">
               <div class="tweet__header">
                 <div class="tweet__author--name">
-                  <a class="username text-white" href="/homeUser/<%= data._id %> "><span><%= data.firstname %> </span></a>
+                  <a
+                    class="username text-white"
+                    href="/homeUser/<%= data._id %> "
+                    ><span><%= data.firstname %> </span></a
+                  >
                 </div>
                 <div class="tweet__author--nickname">
                   <span><%= data.email %> </span>
@@ -113,7 +137,7 @@
                 </div>
               </div>
               <div class="tweet__content">
-                <p><%= data.description %> </p>
+                <p><%= data.description %></p>
                 <img
                   class="tweet__content--img"
                   src="/img/imagen2.jpg"
@@ -147,8 +171,9 @@
                 </div>
                 <div class="tweet__footer--icon">
                   <button
+                    id="btn-like"
                     type="submit"
-                    class="tweet__footer--btn tweet__footer--btn--like"
+                    class="btn-like tweet__footer--btn tweet__footer--btn--like"
                   >
                     <img
                       src="/img/like.svg"
@@ -172,7 +197,7 @@
               </div>
             </section>
           </div>
-          <% } %> 
+          <% } %>
         </a>
       </main>
       <aside class="main__aside">
@@ -230,7 +255,11 @@
               <span>A quién seguir</span>
             </div>
             <div class="aside__whoFollow--content">
-              <img src="/img/img4.jpg" alt="image_citizen" class="aside__whoFollow--image">
+              <img
+                src="/img/img4.jpg"
+                alt="image_citizen"
+                class="aside__whoFollow--image"
+              />
               <div class="aside__whoFollow--text">
                 <div class="aside__whoFollow--name">
                   <span>Programación</span>
@@ -240,11 +269,17 @@
                 </div>
               </div>
               <div class="aside__whoFollow--button">
-                <button type="submit" class="aside__whoFollow--btn"> Seguir</button>
+                <button type="submit" class="aside__whoFollow--btn">
+                  Seguir
+                </button>
               </div>
             </div>
             <div class="aside__whoFollow--content">
-              <img src="/img/landscape.jpg" alt="image_citizen" class="aside__whoFollow--image">
+              <img
+                src="/img/landscape.jpg"
+                alt="image_citizen"
+                class="aside__whoFollow--image"
+              />
               <div class="aside__whoFollow--text">
                 <div class="aside__whoFollow--name">
                   <span>Destinos</span>
@@ -253,10 +288,16 @@
                   <span>@turismo</span>
                 </div>
               </div>
-              <button type="submit" class="aside__whoFollow--btn"> Seguir</button>
+              <button type="submit" class="aside__whoFollow--btn">
+                Seguir
+              </button>
             </div>
             <div class="aside__whoFollow--content">
-              <img src="/img/img6.jpg" alt="image_citizen" class="aside__whoFollow--image">
+              <img
+                src="/img/img6.jpg"
+                alt="image_citizen"
+                class="aside__whoFollow--image"
+              />
               <div class="aside__whoFollow--text">
                 <div class="aside__whoFollow--name">
                   <span>Tecnología</span>
@@ -265,12 +306,29 @@
                   <span>@hardware</span>
                 </div>
               </div>
-              <button type="submit" class="aside__whoFollow--btn"> Seguir</button>
+              <button type="submit" class="aside__whoFollow--btn">
+                Seguir
+              </button>
             </div>
           </div>
         </section>
       </aside>
     </main>
+    <script>
+      const likeBtn = document.querySelectorAll(".btn-like");
+
+      let clicked = false;
+
+      likeBtn.addEventListener("click", () => {
+        if (!clicked) {
+          clicked = true;
+          likeBtn.classList.add("tweet__footer--btn--when-liked");
+        } else {
+          clicked = false;
+          likeBtn.classList.remove("tweet__footer--btn--when-liked");
+        }
+      });
+    </script>
 
     <script
       src="https://kit.fontawesome.com/849e8c00db.js"
