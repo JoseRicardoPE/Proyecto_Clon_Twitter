@@ -15,8 +15,10 @@ const userController = {
     console.log(req.body);
     const newTweet = new Tweet({
       content: req.body.content,
+      createdAt: req.body.createdAt,
     });
     await newTweet.save();
+    res.redirect("/homeUser");
   },
   logout: (req, res, next) => {
     req.logout(function (err) {
@@ -33,4 +35,5 @@ const userController = {
     res.redirect("/homeUser");
   },
 };
+
 module.exports = userController;
