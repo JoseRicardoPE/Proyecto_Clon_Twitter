@@ -95,7 +95,7 @@
         <a href="#" class="main__section--link--tweet">
           <% if (userId === loggedUserId) { %> 
           <button id="edit-btn" class="btn__edit">Editar perfil</button>
-          <% } %> 
+          
           <div id="edit-container" class="edit-container ocultar">
             <form action="/homeUser" method="post">
               <h5>Descripción</h5>
@@ -112,6 +112,14 @@
               </button>
             </form>
           </div>
+          <% }
+         else { %>
+          <a href="/follow/<%= userId%>" id="follow-btn">
+            <button type="submit"  class="btn__edit">Seguir</button> </a>
+          <a href="/unfollow/<%= userId%>" id="unfollow-btn" class=""> 
+            <button type="submit"  class="btn__edit">Dejar de seguir</button></a>
+           
+            <% } %>  
           <div class="tweet">
             <img
               src="<%= user.avatar %> "

@@ -39,6 +39,17 @@ const userController = {
     await User.deleteOne({ _id: req.params.id });
     res.redirect("/");
   },
+  followUser: async (req, res) => {
+    const loggedUser = await User.findById(req.user._id);
+    const followedUser = await User.findOne({ id: req.params.id });
+
+    loggedUser.following.pop(followedUser);
+    followedUser.followers.pop(loggedUser);
+    loggedUser.save();
+    followedUser.save();
+
+    res.redirect(`/homeUser/${req.params.id}`);
+  },
 };
 
 module.exports = userController;

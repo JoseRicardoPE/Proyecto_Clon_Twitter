@@ -13,4 +13,18 @@ userRouter.post("/logout", authenticatedUser, userController.logout);
 
 userRouter.get("/delete/:id", userController.deleteUser);
 
+userRouter.get("/follow/:id", async (req, res) => {
+  const loggedUser = await User.findById(req.user._id);
+  const followedUser = await User.findOne({ id: req.params.id });
+
+  loggedUser.following.push(followedUser);
+  followedUser.followers.push(loggedUser);
+  loggedUser.save();
+  followedUser.save();
+
+  res.redirect(`/homeUser/${req.params.id}`);
+});
+
+userRouter.get("/unfollow/:id", userController.followUser);
+
 module.exports = userRouter;
