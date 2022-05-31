@@ -1,13 +1,13 @@
-const modelUser = require("../models/modelUser");
+const User = require("../models/modelUser");
 
 const userController = {
   // Para probar el schema
-  addUser: async (req, res) => {
-    
-  },
+  addUser: async (req, res) => {},
 
   showHomeUser: async (req, res) => {
-    res.render("userProfile");
+    console.log(req.user);
+    const user = await User.findOne({ _id: req.user._id });
+    res.render("userProfile", { user });
   },
 };
 
