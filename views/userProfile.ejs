@@ -87,8 +87,13 @@
           <div id="edit-container" class="edit-container ocultar">
             <form action="/homeUser" method="post">
               <h5>Descripción</h5>
-              <textarea name="description" rows="10" cols="40">
-Escribe aquí tu descripción</textarea
+              <textarea
+                name="description"
+                rows="10"
+                cols="40"
+                placeholder="Escribe aquí tu descripción"
+              >
+<%= user.description %> </textarea
               >
               <button type="submit" class="btn__guardar">
                 Guardar cambios
