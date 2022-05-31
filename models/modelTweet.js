@@ -7,8 +7,7 @@ const Tweet = new Schema({
     type: Schema.Types.ObjectId,
     ref: "User",
   },
-  createdAt: Date,
-  updatedAt: Date,
+  likes: [String],
 });
 
 module.exports = mongoose.model("Tweet", Tweet);

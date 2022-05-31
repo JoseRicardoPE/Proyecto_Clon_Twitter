@@ -40,7 +40,8 @@ const publicController = {
 
   showTwitterHome: async (req, res) => {
     const users = await User.find({});
-    res.render("twitterHome", { users });
+    const myUser = await User.findById(req.user._id);
+    res.render("twitterHome", { users, myUser });
   },
   login: (req, res) => {},
 };
