@@ -19,19 +19,20 @@ h5 {
 }
 
 .btn__edit {
-  margin-top: 10px;
+  margin: 15px 0 0 15px;
   border: none;
-  padding: 10px 50px;
+  padding: 10px 30px;
   border-radius: 30px;
-  background: rgb(255, 255, 255, 0.8);
-  color: black;
+  background: transparent;
+  color: #e7e9ea;
+  border: 1px solid #e7e9ea;
   font-size: 17px;
   font-weight: 700;
   transition: 0.3s background;
 }
 
 .btn__edit:hover {
-  background: white;
+  background: rgba(0, 0, 0, 0.516);
 }
 
 .btn__guardar {
