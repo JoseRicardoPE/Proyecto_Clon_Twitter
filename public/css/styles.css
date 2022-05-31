@@ -263,7 +263,7 @@ body {
   transition: all 0.3s;
 }
 
-.aside__whoFollow--content:hover{
+.aside__whoFollow--content:hover {
   background: #33363d67;
   cursor: pointer;
 }
@@ -274,7 +274,7 @@ body {
   border-radius: 50%;
 }
 
-.aside__whoFollow--text{
+.aside__whoFollow--text {
   width: 150px;
   margin-left: 15px;
 }
@@ -285,7 +285,7 @@ body {
   font-weight: 700;
 }
 
-.aside__whoFollow--nickName{
+.aside__whoFollow--nickName {
   font-size: 14px;
   font-weight: 400;
   color: #71767b;
