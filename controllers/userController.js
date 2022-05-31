@@ -6,8 +6,8 @@ const userController = {
   addUser: async (req, res) => {},
 
   showHomeUser: async (req, res) => {
-    console.log(req.user);
-    const user = await User.findOne({ _id: req.user._id });
+    console.log(req.params);
+    const user = await User.findOne({ _id: req.params.id });
     res.render("userProfile", { user });
   },
 

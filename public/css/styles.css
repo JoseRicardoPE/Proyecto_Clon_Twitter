@@ -180,7 +180,7 @@ body {
 }
 
 /* --- Ventana modal tweet --- */
-.section__modal--tweet{
+.section__modal--tweet {
   width: 100%;
   padding-top: 40px;
   height: 100vh;
@@ -190,11 +190,11 @@ body {
   left: 0;
 }
 
-.ocultar{
+.ocultar {
   display: none;
 }
 
-.section__modal--content{
+.section__modal--content {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -206,20 +206,20 @@ body {
   border-radius: 20px;
 }
 
-.section__modal--user{
+.section__modal--user {
   display: flex;
   height: 200px;
   border-bottom: 1px solid #5454547b;
   margin: 20px 0;
 }
 
-.section__modal--img{
+.section__modal--img {
   width: 60px;
   height: 65px;
   border-radius: 50%;
 }
 
-.section__modal--text{
+.section__modal--text {
   margin-left: 10px;
   width: 480px;
   height: 180px;
@@ -230,12 +230,12 @@ body {
   outline: none;
 }
 
-.section__modal--btnSubmit{
+.section__modal--btnSubmit {
   display: flex;
   justify-content: flex-end;
 }
 
-.btn__submit--tweet{
+.btn__submit--tweet {
   border: none;
   padding: 6px 18px;
   border-radius: 20px;
@@ -245,11 +245,11 @@ body {
   background: #1a8cd8;
 }
 
-.btn__submit--tweet:hover{
+.btn__submit--tweet:hover {
   background: #1986ce;
 }
 
-.close__modal{
+.close__modal {
   cursor: pointer;
   font-size: 18px;
 }
@@ -373,4 +373,12 @@ body {
   font-size: 14px;
   font-weight: 600;
   margin-left: 10px;
+}
+
+.username {
+  text-decoration: none;
+}
+
+.username:hover {
+  text-decoration: underline;
 }

@@ -59,7 +59,7 @@
           <div class="header__menu--items">
             <a href="#" class="header__menu--link">
               <img src="/img/profile.svg" alt="img_home" class="img__menu" />
-              <span>Perfil</span>
+              <a href="/homeUser/<%= myUser._id %> "><span>Perfil</span></a>
             </a>
           </div>
           <div class="header__menu--items">
@@ -103,7 +103,7 @@
             <section class="tweet__section">
               <div class="tweet__header">
                 <div class="tweet__author--name">
-                  <span><%= data.firstname %> </span>
+                  <a class="username text-white" href="/homeUser/<%= data._id %> "><span><%= data.firstname %> </span></a>
                 </div>
                 <div class="tweet__author--nickname">
                   <span><%= data.email %> </span>
