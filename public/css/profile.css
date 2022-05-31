@@ -1,3 +1,7 @@
+h5 {
+  color: black;
+}
+
 .btn__logOut {
   margin-top: 10px;
   border: none;
@@ -28,4 +32,31 @@
 
 .btn__edit:hover {
   background: white;
+}
+
+.btn__guardar {
+  margin: 10px 0;
+  border: none;
+  padding: 10px 50px;
+  border-radius: 30px;
+  background-color: rgb(78, 78, 223, 06);
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  transition: 0.3s background;
+}
+
+.btn__guardar:hover {
+  background-color: rgb(78, 78, 223);
+}
+
+.ocultar {
+  display: none;
+}
+
+.edit-container {
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  width: 350px;
 }

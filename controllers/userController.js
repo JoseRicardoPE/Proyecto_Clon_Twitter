@@ -28,5 +28,11 @@ const userController = {
       res.redirect("/");
     });
   },
+  createBio: async (req, res) => {
+    const user = await User.findById(req.user.id);
+    user.description = req.body.description;
+    user.save();
+    res.redirect("/homeUser");
+  },
 };
 module.exports = userController;

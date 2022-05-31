@@ -58,7 +58,7 @@
             </a>
           </div>
           <div class="header__menu--items">
-            <a href="#" class="header__menu--link">
+            <a href="/homeUser" class="header__menu--link">
               <img src="/img/profile.svg" alt="img_home" class="img__menu" />
               <span>Perfil</span>
             </a>
@@ -83,7 +83,18 @@
       </header>
       <main class="main__section">
         <a href="#" class="main__section--link--tweet">
-          <button id="edit_btn" class="btn__edit">Editar perfil</button>
+          <button id="edit-btn" class="btn__edit">Editar perfil</button>
+          <div id="edit-container" class="edit-container ocultar">
+            <form action="/homeUser" method="post">
+              <h5>Descripción</h5>
+              <textarea name="description" rows="10" cols="40">
+Escribe aquí tu descripción</textarea
+              >
+              <button type="submit" class="btn__guardar">
+                Guardar cambios
+              </button>
+            </form>
+          </div>
           <div class="tweet">
             <img src="" alt="image_girl" class="tweet__author--img" />
             <section class="tweet__section">
@@ -284,5 +295,6 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="/js/userProfile.js"></script>
   </body>
 </html>
