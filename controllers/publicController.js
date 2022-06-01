@@ -2,6 +2,7 @@ const modelTweet = require("../models/modelTweet");
 const User = require("../models/modelUser");
 const passport = require("passport");
 const bcrypt = require("bcryptjs");
+const { faker } = require("@faker-js/faker");
 
 const publicController = {
   showHome: async (req, res) => {
@@ -25,6 +26,7 @@ const publicController = {
         lastname: req.body.lastname,
         email: req.body.email,
         password: hash,
+        avatar: faker.image.avatar(),
       });
       await newUser.save();
     } else {
