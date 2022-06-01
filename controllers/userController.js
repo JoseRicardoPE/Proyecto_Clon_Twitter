@@ -8,7 +8,7 @@ const userController = {
   showHomeUser: async (req, res) => {
     const loggedUserId = req.user.id;
     const userId = req.params.id;
-    console.log(loggedUserId, userId);
+    // console.log(loggedUserId, userId);
     const user = await User.findOne({ _id: req.params.id });
     res.render("userProfile", { user, loggedUserId, userId });
   },
@@ -41,7 +41,18 @@ const userController = {
   },
   followUser: async (req, res) => {
     const loggedUser = await User.findById(req.user._id);
-    const followedUser = await User.findOne({ id: req.params.id });
+    const followedUser = await User.findById(req.params.id);
+
+    loggedUser.following.push(followedUser);
+    followedUser.followers.push(loggedUser);
+    loggedUser.save();
+    followedUser.save();
+
+    res.redirect(`/homeUser/${req.params.id}`);
+  },
+  unfollowUser: async (req, res) => {
+    const loggedUser = await User.findById(req.user._id);
+    const followedUser = await User.findById(req.params.id);
 
     loggedUser.following.pop(followedUser);
     followedUser.followers.pop(loggedUser);
