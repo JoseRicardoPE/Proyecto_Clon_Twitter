@@ -105,7 +105,7 @@
                 cols="40"
                 placeholder="Escribe aquí tu descripción"
               >
-<%= user.description %> </textarea
+          <%= user.description %> </textarea
               >
               <button type="submit" class="btn__guardar">
                 Guardar cambios
@@ -126,18 +126,23 @@
               alt="image_girl"
               class="tweet__author--img"
             />
-            <section class="tweet__section">
-              <div class="tweet__header">
-                <div class="tweet__author--name">
-                  <span><%= user.firstname %> </span>
-                </div>
-                <div class="tweet__author--nickname">
-                  <span><%= user.email %> </span>
-                </div>
-                <div class="tweet__author--date">
-                  <span>4h</span>
-                </div>
+            <div class="tweet__header">
+              <div class="tweet__author--name">
+                <span><%= user.firstname %> </span>
               </div>
+              <div class="tweet__author--nickname">
+                <span><%= user.email %> </span>
+              </div>
+    
+              <div class="tweet__header--menu">
+                <a href="#" class="tweet__header--link">Tweets</a>
+                <a href="#" class="tweet__header--link">Tweets y respuestas</a>
+                <a href="#" class="tweet__header--link">Fotos y videos</a>
+                <a href="#" class="tweet__header--link">Me gusta</a>
+              </div>
+            </div>
+            
+            <section class="tweet__section">
               <div class="tweet__content">
                 <p><%= user.description%></p>
                 <img
