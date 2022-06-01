@@ -2,6 +2,7 @@ h5 {
   color: black;
 }
 
+/* --- Buttons User Profile --- */
 .btn__logOut {
   margin-top: 10px;
   border: none;
@@ -76,4 +77,56 @@ h5 {
   background-color: white;
   border-radius: 10px;
   width: 350px;
+}
+
+/* --- Styles User Profile --- */
+.tweet{
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet__author--img{
+  width: 145px;
+  height: 150px;
+  margin: 20px 0;
+  border: 3px solid black;
+  margin-left: 10px;
+}
+
+.tweet__header{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5px;
+  border-bottom: 1px solid rgba(129, 129, 129, 0.5);
+}
+
+.tweet__author--name{
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.tweet__author--nickname{
+  margin-bottom: 10px;
+}
+
+/* --- Styles menú header user profile --- */
+.tweet__header--menu{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  /* padding: 0 10px; */
+}
+
+.tweet__header--link{
+  color: #71767b;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 45px;
+  transition: all 0.3s;
+}
+
+.tweet__header--link:hover{
+  background-color: #00000090;
+  color: #e7e9ea;
 }
