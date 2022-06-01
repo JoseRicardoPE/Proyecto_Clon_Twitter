@@ -1,4 +1,4 @@
-const modelTweet = require("../models/modelTweet");
+const Tweet = require("../models/modelTweet");
 const User = require("../models/modelUser");
 const passport = require("passport");
 const bcrypt = require("bcryptjs");
@@ -41,10 +41,10 @@ const publicController = {
   },
 
   showTwitterHome: async (req, res) => {
-    const users = await User.find({});
-    const myUser = await User.findById(req.user._id).populate("following");
-    console.log(myUser);
-    res.render("twitterHome", { myUser, users });
+    const tweets = await Tweet.find({ author: req.user.following }).populate(
+      "author"
+    );
+    res.render();
   },
 };
 

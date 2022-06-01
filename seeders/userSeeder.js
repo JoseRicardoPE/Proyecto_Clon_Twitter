@@ -3,8 +3,8 @@ const { faker } = require("@faker-js/faker");
 const User = require("../models/modelUser");
 
 // Seeder para "User"
-
 const createUsers = async () => {
+  await User.collection.drop();
   for (let i = 0; i < 10; i++) {
     const user = await new User({
       firstname: faker.name.firstName(),
@@ -16,7 +16,7 @@ const createUsers = async () => {
       createdAt: new Date(),
       updatedAt: new Date(),
     });
-    user.save();
+    await user.save();
   }
 };
 
