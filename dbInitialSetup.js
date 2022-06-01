@@ -19,5 +19,5 @@ module.exports = async () => {
   console.log("[Database] Los usuarios fueron insertados");
 
   await require("./seeders/tweetSeeder")();
-  console.log("[Database] Los tweets fueron insertados");*/
+  console.log("[Database] Los tweets fueron insertados"); */
 };
