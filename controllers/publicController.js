@@ -41,10 +41,13 @@ const publicController = {
   },
 
   showTwitterHome: async (req, res) => {
+    const users = await User.find();
+    const myUser = await User.findById(req.user._id);
     const tweets = await Tweet.find({ author: req.user.following }).populate(
       "author"
     );
-    res.render();
+    console.log(tweets);
+    res.render("twitterHome", { users, tweets, myUser });
   },
 };
 
