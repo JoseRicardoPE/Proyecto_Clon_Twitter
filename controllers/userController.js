@@ -40,24 +40,24 @@ const userController = {
     res.redirect("/");
   },
   followUser: async (req, res) => {
-    const loggedUser = await User.findById(req.user._id);
-    const followedUser = await User.findById(req.params.id);
+    await User.findByIdAndUpdate(req.user._id, {
+      $push: { following: req.params.id },
+    });
 
-    loggedUser.following.push(followedUser);
-    followedUser.followers.push(loggedUser);
-    loggedUser.save();
-    followedUser.save();
+    await User.findByIdAndUpdate(req.params.id, {
+      $push: { followers: req.user._id },
+    });
 
     res.redirect(`/homeUser/${req.params.id}`);
   },
   unfollowUser: async (req, res) => {
-    const loggedUser = await User.findById(req.user._id);
-    const followedUser = await User.findById(req.params.id);
+    await User.findByIdAndUpdate(req.user._id, {
+      $pull: { following: req.params.id },
+    });
 
-    loggedUser.following.pop(followedUser);
-    followedUser.followers.pop(loggedUser);
-    loggedUser.save();
-    followedUser.save();
+    await User.findByIdAndUpdate(req.params.id, {
+      $pull: { followers: req.user._id },
+    });
 
     res.redirect(`/homeUser/${req.params.id}`);
   },
