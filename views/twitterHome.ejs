@@ -113,10 +113,10 @@
           </div>
         </section>
         <a href="#" class="main__section--link--tweet">
-          <% for (const data of users) { %>
+          <% for (const tweet of tweets) { %>
           <div class="tweet">
             <img
-              src="<%=data.avatar %>"
+              src="<%=tweet.author.avatar %>"
               alt="image_girl"
               class="tweet__author--img"
             />
@@ -125,19 +125,19 @@
                 <div class="tweet__author--name">
                   <a
                     class="username text-white"
-                    href="/homeUser/<%= data._id %> "
-                    ><span><%= data.firstname %> </span></a
+                    href="/homeUser/<%= tweet.author._id %> "
+                    ><span><%= tweet.author.firstname %> </span></a
                   >
                 </div>
                 <div class="tweet__author--nickname">
-                  <span><%= data.email %> </span>
+                  <span><%= tweet.author.email %> </span>
                 </div>
                 <div class="tweet__author--date">
                   <span>4h</span>
                 </div>
               </div>
               <div class="tweet__content">
-                <p><%# data.description %></p>
+                <p><%= tweet.content %></p>
                 <img
                   class="tweet__content--img"
                   src="/img/imagen2.jpg"
