@@ -315,19 +315,22 @@
       </aside>
     </main>
     <script>
-      const likeBtn = document.querySelectorAll(".btn-like");
+      const botones = document.querySelectorAll(".btn-like");
+      console.log(botones);
 
       let clicked = false;
 
-      likeBtn.addEventListener("click", () => {
-        if (!clicked) {
-          clicked = true;
-          likeBtn.classList.add("tweet__footer--btn--when-liked");
-        } else {
-          clicked = false;
-          likeBtn.classList.remove("tweet__footer--btn--when-liked");
-        }
-      });
+      for (let i = 0; i < botones.length; i++) {
+        botones[i].addEventListener("click", function () {
+          if (!clicked) {
+            clicked = true;
+            botones[i].classList.add("tweet__footer--btn--when-liked");
+          } else {
+            clicked = false;
+            botones[i].classList.remove("tweet__footer--btn--when-liked");
+          }
+        });
+      }
     </script>
 
     <script
