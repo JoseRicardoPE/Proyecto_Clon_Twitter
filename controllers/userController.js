@@ -17,8 +17,13 @@ const userController = {
     console.log(req.body);
     const newTweet = new Tweet({
       content: req.body.content,
+      author: req.user.id,
     });
     await newTweet.save();
+    await User.findByIdAndUpdate(req.user.id, {
+      $push: { tweets: newTweet.id },
+    });
+
     res.redirect("/twitterHome");
   },
   logout: (req, res, next) => {
